@@ -1,0 +1,115 @@
+- INSERT Command -
+- used to add rows to existing tables
+- identify the table in the INSERT INTO clause
+- specify data in the VALUES clause
+- can only add one row at a time into a table
+
+- Syntax -
+- Enclose nonnumerica data in single quotes
+- if a column list is not provided, a value must be assigned to each column in 
+the table
+ex. INSERT INTO tablename (col1, col2...) VALUES ('val1', num1, 'dd-dat-dd', NULL)
+
+- Inserting NULL values -
+- omit column name from INSERT INTO clause colun list
+- subsitute two single quotation marks
+- use NULL keyword
+
+- ON NULL clause -
+- introduced in Oracle 12c
+- option with a DEFAULT setting
+ex. ALTER TABLE tablename MODIFY (col1 DEFAULT ON NULL 0)
+
+INSERT INTO is NOT allowed on VIRTUAL COLUMNS
+
+- Constraint Violations -
+- when you add or modify table data, the data is checked for compliance with any
+applicable constraints
+
+- Activating the DEFAULT option -
+- include a column list in the INSERT statement ignoring the column to use
+the DEFAULT option
+- use the DEFAULT keyword as the value for the column
+ex. INSERT INTO tablename (col1, col2,...) VALUES ('val1', default, 'val2')
+
+- Inserting data from exising table -
+- Subsitute subquery for VALUES clause
+ex.INSERT INTO tablename (col1, col2, col3) 
+	SELECT col1, col2, col3 FROM othertable
+
+- Modifying Existing Rows - 
+- modify rows using UPDATE command
+- use UPDATE command to:
+	- add values to an existing row (replacing NULL values)
+	- change existing values
+- UPDATE claues identifies table
+- SET clause identifies columns being changed and new values
+- optional WHERE clause specifies rows to be changed - if ommited all rows
+will be updated
+ex. UPDATE tablename
+	SET col1 = 'val1'
+	WHERE col2 = 'val2'
+
+- Substitution Variables -
+- prompts user for value
+- identified by ampersand (&) preceding variable name
+- can be used to create interactive scripts
+ex. UPDATE tablename
+	SET col1 = '&val1'
+	WHERE col2 = '&val2'
+
+- Deleting rows -
+- DELETE command removeed a row from a table
+ex. DELETE FROM tablename 
+	WHERE col1 = 'val1'
+- ommiting WHERE claues removes all rows
+ 
+- Transaction Control Statments -
+- results of data manipulation language (DML) are not permanetly updated to 
+a table unitil explicit or implicit COMMIT occurs.
+- transactions control statments can:
+	- commit data through COMMIT command
+	- undo data changes through ROLLBACK command
+
+- COMMIT command -
+- explicit COMMIT occurs by executing COMMIT
+- implicit COMMIT occurs when DDL command is executed or user properly 
+exits the system
+- permantly updates tables and allows other users to view changes
+
+- ROLLBACK command - 
+- used to undo changed that have not been committed
+- occurs when:
+	- ROLLBACK is executed
+	- System restarts after a crash
+- SAVEPOINT marks a specific spot within the transaction
+- can ROLLBACK to a SAVEPOINT to undo part of the transaction
+
+- Table Locks -
+- prevent users from changing same data or objects 
+- two types:
+	- shared - prevents DML operations on a portion of table
+	- exclusive - locks table preventing other exclusive or shared locks
+
+- LOCK TABLE | shared lock -
+- locks portion of table affected by DML operation
+- implicitly occurs during UPDATE or DELETE operations
+- explicitly occurs through LOCK TABLE command with SHARE MODE option 
+- released when COMMIT or ROLLBACK occurs
+
+- LOCK TABLE | exclusive lock - 
+- implicitly locks table for DDL operaions - CREATE or ALTER TABLE
+- explicitly locked through LOCK TABLE command with EXCLUSIVE MODE option
+- released after execution of DDL operation or after user exits system
+
+- SELECT ...FOR UPDATE command -
+- creates shared lock on retrueved portion of table
+- prevents one user from changing a row while another user is selecting rows to
+be changed
+- released through implicit or explicit commit
+ex. SELECT columnnames
+	FROM tablename
+	[WHERE condition]
+	FOR UPDATE
+
+8 & 10 on lab5 = ROLLBACK

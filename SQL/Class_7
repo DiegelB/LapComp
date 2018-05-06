@@ -1,0 +1,34 @@
+- User Creation and Management - 
+
+- Data Security -
+	- User accounts provide a method of authenticity
+	- They can grant access to specific objects
+	- They identify owners of objects 
+
+- Creating a User - 
+	- The CREATE USER command gives each user a username and password
+	- CREATE USER username
+	  IDENTIFIED BY password
+
+- Assigning User Privlidges - 
+	- There are two types
+	- System 
+		- Allows access to database and execution of DDL 
+		  operations
+	- Object
+		- Allow a user to perform DML and query operations
+	- Even with a valid user name and password a user still needs
+	  the CREATE SESSION privilege to connect to a database
+	- GRANT CREATE SESSION 
+	  TO rthomas
+	  
+- System Privilges -
+	- Affect a users ability to create, alter, and drop objects
+	- Use of ANY keyword with an object privilege (INSERT ANY
+	  TABLE) is considered a system privilege
+	- List of all available system privileges available through
+	  SYSTEM_PRIVILEGE_MAP
+	  
+- Granting System Privileges - 
+	 - System privileges are given through the GRANT command
+	 - GRANT systemprivilege 

@@ -1,0 +1,72 @@
+Database - logical structure to store data.
+
+Database managment system (DBMS) - software to create and interact with the
+database.
+
+Character - basic unit of data, and it can be a letter, number, or symbol.
+Field - group of related characters
+Record - a collection of fields
+File - group of records 
+
+Character is the basic unit of a database.
+
+A feild represents an arrtribute or characteristics of an enitity
+Corrosponds to a column in the physical database
+
+A record is a collection of fields, corrosponds to a row in the pysical
+database.
+
+A file is a group of records abut the same type of entity.
+The logical database is considered an entity. (entity relationship diagram)
+The physical database is considered a table. (the actual database or DBMS)
+
+Data storage: manage the physical structure of the database 
+Securtiy: control user access and privileges
+Multiuser access: manage cocurrent data access
+Backup: enable recovery options for database failures (disater recovery)
+Data access language: provide a language that allows database access
+Data integrity: enable constraints or checks on data
+Data dictionary: maintain information about database structure
+
+System development life cycle:
+- system investiogation - understanding the problem 
+- system anaysis - understanding the solution
+- system design - creating the lofical and physical components
+- system implementation - placing completed system into operation
+- system mainteance and review - evaluating the implemented system
+
+Entity-relationship model:
+- used to depict relathionships that exist among entites
+- the following relathionships can be included in an E-R model
+	- one-to-one
+	1 person has only 1 birth mom
+	- one-to-many
+	1 mom can have many children
+	- many-to-many
+	many children can have many hobbies 
+- one-to-one:
+	- each occurrence of data in one entity is represented by only one
+	occurrence of data in the other entity
+- one-to-many:
+	- each occurrence of data in one entity can be represented by many 
+	occurenced of the data in the other entity
+- many-to-many:
+	- data can have multiple occurrences in both entites
+
+Database normalization:
+determines the amount of colomns and rows in a database.
+used to reduce or control data redundancy.
+- data reduncany - refers to having the same data in different places of the
+database
+- data anamolies - refers to data inconcistinces
+
+First normal form (1NF):
+primary key is identifed (bus #, lunch #, student ID)
+repeating groups are eliminated 
+
+Composite primary key:
+more than one column is required to uniquley identify a row
+can lead to partial dependency - a column is only dependent on a portion of
+the primary key
+
+

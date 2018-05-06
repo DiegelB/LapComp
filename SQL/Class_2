@@ -1,0 +1,40 @@
+SQL Commands 
+
+DESCRIBE: grabs data of a particular table. look at the table structure/layout
+
+SELECT: major command for SQL. used to retrieve data, like all the names from a
+	particular table. refered to as a query. 
+SELECT and FROM clauses are required
+SELECT clause identifies columns
+FROM clause identifies tables
+Each clause begins with a keyword 
+
+SELECT * FROM [table] - shows all columns (wild card)
+
+SELECT [column] FROM [table] - shows only 1 column
+
+SELECT, [column1], [column2] FROM [table] - shows multible columns
+
+Column aliases:
+- list the alias after the column heading
+- AS keyword is optional
+- enclose in double quotes "x y z"
+
+Arithmetic Operations:
+traditonal pemdas (mutliplication and divison will be executed first in left-to
+-right order)
+
+NULL = unknown/NA
+
+Using DISTINCT and UNIQUE:
+Used to suppress dublicates
+
+SELECT DISTINCT state FROM customers
+(this shows the states only once even if there are multiple occurences)
+
+Concatinate:
+|| (double pipe)
+SELECT firstname || ' ' || lastname AS "First and Last" FROM customers
+Ben Diegel (with a column name as First and Last)
+
+

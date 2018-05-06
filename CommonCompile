@@ -1,0 +1,15 @@
+java:
+
+compile: javac <fileName>.java
+run: java <fileName>
+
+c++:
+
+compile: g++ -o <newFileName> <fileName>.cpp
+run: ./<newFileName>
+
+python:
+
+interpret: python2/3 <fileName>.py
+
+

@@ -1,0 +1,30 @@
+Create Tables 
+
+DDL (Data Definition Language) - creates the data and defines it
+
+table design:
+- can contain max 30 chars (no blanks)
+- must begin with letter
+- can conatain numbers, underscore, and #
+- must be unique
+- no reserved words can be used (SELECT, FROM, etc) 
+
+datatype: 
+4 dominate types
+VARCHAR2(n) where n = length of characters
+CHAR(n)
+
+VARCHAR is elastic, can adjsut with the length of value
+CHAR is static, cannot adjust with the length of value
+
+NUMBER(p,s)
+DATE 
+
+CREATE TABLE tablename (columnname datatype [DEFAULT value] [, columnname2 datatype
+] );
+
+Metadata:
+data about your data. customers in your table is your data, how many customers 
+are in your database is metadata.
+
+

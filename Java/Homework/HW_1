@@ -1,0 +1,85 @@
+Please Print out your answers and bring it to the class on Tuesday, January 16. 
+Flowcharting: Create a flowchart using Raptor for the following problems
+
+1.  Available Credit
+The following steps should be followed in a program that calculates a customer’s
+available credit:
+
+
+1. Display the message “Enter the customer’s maximum credit.”
+2. Wait for the user to enter the customer’s maximum credit.
+3. Display the message “Enter the amount of credit used by the customer.”
+4. Wait for the user to enter the customer’s credit used.
+5. Subtract the used credit from the maximum credit to get the customer’s available
+credit.
+6. Display a message that shows the customer’s available credit.
+
+
+2. Sales Tax
+Design a hierarchy chart or ﬂowchart for a program that calculates the total of a retail
+sale. The program should ask the user for:
+
+
+– The retail price of the item being purchased
+– The sales tax rate
+Once these items have been entered, the program should calculate and display:
+– The sales tax for the purchase
+– The total of the sale
+
+
+3. Account Balance
+Design a hierarchy chart or ﬂowchart for a program that calculates the current bal-
+ance in a savings account. The program must ask the user for:
+
+
+– The starting balance
+– The total dollar amount of deposits made
+– The total dollar amount of withdrawals made
+– The monthly interest rate
+
+
+Once the program calculates the current balance, it should be displayed on the screen.
+Table Tracing: Create a table trace for the following algorithms
+
+4. Algorithm #1
+
+The variable x starts with the value 0.
+The variable y starts with the value 5.
+Add 1 to x.
+Add 1 to y.
+Add x and y, and store the result in y.
+Display the value in y on the screen.
+
+
+5. Algorithm #2
+
+The variable j starts with the value 10.
+The variable k starts with the value 2.
+The variable l starts with the value 4.
+Store the value of j times k in j.
+Store the value of k times l in l.
+Add j and l, and store the result in k.
+Display the value in k on the screen.
+
+
+6. Algorithm #3
+
+The variable a starts with the value 1.
+The variable b starts with the value 10.
+The variable c starts with the value 100.
+The variable x starts with the value 0.
+Store the value of c times 3 in x.
+Add the value of b times 6 to the value already in x.
+Add the value of a times 5 to the value already in x.
+Display the value in x on the screen.
+Write Algorithms: Write a pseudo code and flowchart algorithm for the following problems
+
+7. Problem #1
+
+Your class wants a program that can take in a numeric grade and output the equivalent letter grade. 
+Your solution should not accept values less than 0 or greater than 100. (Provide both the pseudocode and flowchart)
+
+8. Problem #2
+
+You are working for the weather channel and you have to write a program that will genearate the average temperature 
+for the last 7 days. (Provide both the pseudocode and flowchart)
